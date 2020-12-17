@@ -1,0 +1,152 @@
+<div class="row">
+
+  <div class="col-sm-5 px-0 d-none d-sm-block">
+    <img src="assets/images/login-bg.jpg" alt="login image" class="login-img">
+  </div>
+
+  <div class="col-sm-7 login-section-wrapper">
+    <div class="login-wrapper my-auto" style="width: 100% !important;">
+      <h3 class="mb-5">Register new account</h3>
+
+      <form [formGroup]="form" (ngSubmit)="onSubmit()">
+        <div class="row">
+          <div class="col-sm-4">
+            <div class="form-group">
+              <label for="title">Title</label>
+              <select formControlName="title" class="form-control shadow-none " id="title"
+                      [ngClass]="{ 'is-invalid': submitted && f.title.errors }">
+                <option value=""></option>
+                <option value="Mr">Mr</option>
+                <option value="Mrs">Mrs</option>
+                <option value="Miss">Miss</option>
+                <option value="Ms">Ms</option>
+              </select>
+              <div *ngIf="submitted && f.title.errors" class="invalid-feedback">
+                <div *ngIf="f.title.errors.required">Title is required</div>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-4">
+            <div class="form-group">
+              <label>First Name</label>
+              <input type="text" formControlName="firstName" class="form-control  shadow-none"
+                     [ngClass]="{ 'is-invalid': submitted && f.firstName.errors }"/>
+              <div *ngIf="submitted && f.firstName.errors" class="invalid-feedback">
+                <div *ngIf="f.firstName.errors.required">First Name is required</div>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-4">
+            <div class="form-group">
+              <label for="lastname">Last Name</label>
+              <input type="text" id="lastname" formControlName="lastName" class=" shadow-none form-control"
+                     [ngClass]="{ 'is-invalid': submitted && f.lastName.errors }"/>
+              <div *ngIf="submitted && f.lastName.errors" class="invalid-feedback">
+                <div *ngIf="f.lastName.errors.required">Last Name is required</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-sm-6">
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input id="email" type="text" formControlName="email" class=" shadow-none form-control"
+                     [ngClass]="{ 'is-invalid': submitted && f.email.errors }"/>
+              <div *ngIf="submitted && f.email.errors" class="invalid-feedback">
+                <div *ngIf="f.email.errors.required">Email is required</div>
+                <div *ngIf="f.email.errors.email">Email must be a valid email address</div>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-6">
+            <div class="form-group">
+              <label for="phone">Phone</label>
+              <input type="text" id="phone" formControlName="phone" class="shadow-none form-control"
+                     [ngClass]="{ 'is-invalid': submitted && f.phone.errors }">
+              <div *ngIf="submitted && f.email.errors" class="invalid-feedback">
+                <div *ngIf="f.phone.errors.required">Phone is required</div>
+                <div *ngIf="f.phone.errors.phone">Phone must be a valid phone format</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-sm-6">
+            <div class="form-group">
+              <label for="category">Categories</label>
+
+              <select [(ngModel)]="selectedCategory" id="category" formControlName="category"
+                      class=" shadow-none form-control"
+                      [ngClass]="{ 'is-invalid': submitted && f.category.errors }"
+                      (change)='onChangeCategory($event.target.value)'>
+                <option disabled selected>Select category</option>
+                <option *ngFor="let category of categories; index as i;" [value]="i">
+                  {{ category.name }}
+                </option>
+              </select>
+              <div *ngIf="submitted && f.category.errors" class="invalid-feedback">
+                <div *ngIf="f.category.errors.required">Select a category / specialty</div>
+                <div *ngIf="f.category.errors.category">Select a category / specialty</div>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-6">
+            <div class="form-group">
+              <label for="specialty">Specialty</label>
+              <select [(ngModel)]="selectedSpecialty" formControlName="specialty" class="shadow-none form-control"
+                      [ngClass]="{ 'is-invalid': submitted && f.specialty.errors }" name="specialty" id="specialty"
+                      (change)='onChangeSpecialty($event.target.value)'>
+                <option disabled selected>Select specialty</option>
+                <option *ngFor="let specialty of specialties; index as i;" [value]="specialty.name">
+                  {{ specialty.name }}
+                </option>
+              </select>
+              <div *ngIf="submitted && f.specialty.errors" class="invalid-feedback">
+                <div *ngIf="f.specialty.errors.required">Specialty is required</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group col-sm-6">
+            <label for="password">Password</label>
+            <input type="password" id="password" formControlName="password" class=" shadow-none form-control"
+                   [ngClass]="{ 'is-invalid': submitted && f.password.errors }"/>
+            <div *ngIf="submitted && f.password.errors" class="invalid-feedback">
+              <div *ngIf="f.password.errors.required">Password is required</div>
+              <div *ngIf="f.password.errors.minlength">Password must be at least 6 characters</div>
+            </div>
+          </div>
+          <div class="form-group col-sm-6">
+            <label for="passwordconfirmation">Confirm Password</label>
+            <input type="password" id="passwordconfirmation" formControlName="confirmPassword"
+                   class=" shadow-none form-control"
+                   [ngClass]="{ 'is-invalid': submitted && f.confirmPassword.errors }"/>
+            <div *ngIf="submitted && f.confirmPassword.errors" class="invalid-feedback">
+              <div *ngIf="f.confirmPassword.errors.required">Confirm Password is required</div>
+              <div *ngIf="f.confirmPassword.errors.mustMatch">Passwords must match</div>
+            </div>
+          </div>
+        </div>
+        <div class="form-group form-check">
+          <input type="checkbox" formControlName="acceptTerms" id="acceptTerms" class=" shadow-none form-check-input"
+                 [ngClass]="{ 'is-invalid': submitted && f.acceptTerms.errors }"/>
+          <label for="acceptTerms" class="form-check-label">Accept Terms & Conditions</label>
+          <div *ngIf="submitted && f.acceptTerms.errors" class="invalid-feedback">Accept Ts & Cs is required</div>
+        </div>
+        <div class="form-group">
+          <button [disabled]="loading" class="btn btn-primary">
+            <span *ngIf="loading" class="spinner-border spinner-border-sm mr-1"></span>
+            Register
+          </button>
+          <a routerLink="../login" href="" class=" shadow-none btn btn-link">Cancel</a>
+        </div>
+      </form>
+
+    </div>
+  </div>
+
+</div>

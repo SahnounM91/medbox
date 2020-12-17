@@ -1,0 +1,273 @@
+[
+  {
+    "_id": "5fd68eeecf53d02cfc25d986",
+    "index": 0,
+    "name": "Médecine et spécialités médicales",
+    "specialties": [
+      {
+        "_id": "5fd68eeeb244d4b02915264e",
+        "index": 0,
+        "name": "Médecine interne"
+      },
+      {
+        "_id": "5fd68eee025324ed4c04f28a",
+        "index": 1,
+        "name": "Maladies infectieuses"
+      },
+      {
+        "_id": "5fd68eeebb6894b87d486604",
+        "index": 2,
+        "name": "Réanimation médicale"
+      },
+      {
+        "_id": "5fd68eee06eef82a9560bc39",
+        "index": 3,
+        "name": "Carcinologie médicale"
+      },
+      {
+        "_id": "5fd68eeea4bf492ea10841b7",
+        "index": 4,
+        "name": "Nutrition et maladies nutritionnelles"
+      },
+      {
+        "_id": "5fd68eee8ea16fdaaeb57c20",
+        "index": 5,
+        "name": "Hématologie clinique"
+      },
+      {
+        "_id": "5fd68eee72920faf12bf21d4",
+        "index": 6,
+        "name": "Endocrinologie"
+      },
+      {
+        "_id": "5fd68eee2286237f43922543",
+        "index": 7,
+        "name": "Cardiologie"
+      },
+      {
+        "_id": "5fd68eee85fa16e55fc8aeaf",
+        "index": 8,
+        "name": "Néphrologie"
+      },
+      {
+        "_id": "5fd68eee0f446fcaf9ab0148",
+        "index": 9,
+        "name": "Neurologie"
+      },
+      {
+        "_id": "5fd68eeede1d9b4ba8a6b099",
+        "index": 10,
+        "name": "Pneumologie"
+      },
+      {
+        "_id": "5fd68eee6d20b9713096bb1c",
+        "index": 11,
+        "name": "Rhumatologie"
+      },
+      {
+        "_id": "5fd68eeec58902efeda67a41",
+        "index": 12,
+        "name": "Gastro-entérologie"
+      },
+      {
+        "_id": "5fd68eeecef519bfae86a51c",
+        "index": 13,
+        "name": "Médecine physique"
+      },
+      {
+        "_id": "5fd68eee7b875c2e3354075d",
+        "index": 14,
+        "name": "Dermatologie"
+      },
+      {
+        "_id": "5fd68eee4b5cf2df5aeab86e",
+        "index": 15,
+        "name": "Pédiatrie"
+      },
+      {
+        "_id": "5fd68eee2ef48d1b2d6d4f10",
+        "index": 16,
+        "name": "Psychiatrie"
+      },
+      {
+        "_id": "5fd68eee10868ce40f809439",
+        "index": 17,
+        "name": "Pédopsychiatrie"
+      },
+      {
+        "_id": "5fd68eeedf11c1d5072aeb73",
+        "index": 18,
+        "name": "Imagerie médicale"
+      },
+      {
+        "_id": "5fd68eee8c30abf38e942d36",
+        "index": 19,
+        "name": "Radiothérapie carcinologique"
+      },
+      {
+        "_id": "5fd68eee600162f681f84629",
+        "index": 20,
+        "name": "Médecine légale"
+      },
+      {
+        "_id": "5fd68eeeb3f42c4884bb99c4",
+        "index": 21,
+        "name": "Médecine du travail"
+      },
+      {
+        "_id": "5fd68eee242a6494d43a802e",
+        "index": 22,
+        "name": "Médecine préventive et communautaire"
+      },
+      {
+        "_id": "5fd68eee964363405b1fe2c7",
+        "index": 23,
+        "name": "Anesthésie - réanimation"
+      },
+      {
+        "_id": "5fd68eee1ce4ca766d10abc0",
+        "index": 24,
+        "name": "Anatomie et cytologie pathologique"
+      },
+      {
+        "_id": "5fd68eeeeef3c405a7d4f3fa",
+        "index": 25,
+        "name": "Médecine d'urgence"
+      }
+    ]
+  },
+  {
+    "_id": "5fd68eeede8cc42eac2fb9ff",
+    "index": 1,
+    "name": "Chirurgie et spécialités chirurgicales",
+    "specialties": [
+      {
+        "_id": "5fd68eee613578542fb9687f",
+        "index": 0,
+        "name": "Chirurgie générale"
+      },
+      {
+        "_id": "5fd68eeee84d4515bb778b60",
+        "index": 1,
+        "name": "Chirurgie carcinologique"
+      },
+      {
+        "_id": "5fd68eee07a2898e43af7e27",
+        "index": 2,
+        "name": "Chirurgie thoracique"
+      },
+      {
+        "_id": "5fd68eeec8a1575369234f90",
+        "index": 3,
+        "name": "Chirurgie vasculaire périphérique"
+      },
+      {
+        "_id": "5fd68eee4e76b76cb446d7b5",
+        "index": 4,
+        "name": "Chirurgie neurologique"
+      },
+      {
+        "_id": "5fd68eee3de4b72f05d65466",
+        "index": 5,
+        "name": "Chirurgie urologique"
+      },
+      {
+        "_id": "5fd68eee69f1f8831d5b4ffa",
+        "index": 6,
+        "name": "Chirurgie plastique"
+      },
+      {
+        "_id": "5fd68eee4f4e098e307a966a",
+        "index": 7,
+        "name": "Chirurgie cardio-vasculaire"
+      },
+      {
+        "_id": "5fd68eee96bf97f8961135cb",
+        "index": 8,
+        "name": "Ophtalmologie"
+      },
+      {
+        "_id": "5fd68eee2de774cbf5d6b6ef",
+        "index": 9,
+        "name": "O.R.L"
+      },
+      {
+        "_id": "5fd68eee13a6db09b4e1321f",
+        "index": 10,
+        "name": "Stomatologie et chirurgie maxillo-faciale"
+      },
+      {
+        "_id": "5fd68eee196930c5817c8862",
+        "index": 11,
+        "name": "Gynécologie-obstétrique"
+      }
+    ]
+  },
+  {
+    "_id": "5fd68eee0491ae027e8b5ec3",
+    "index": 2,
+    "name": "Biologie et disciplines fondamentales",
+    "specialties": [
+      {
+        "_id": "5fd68eee59b1b1c15fd91aaf",
+        "index": 0,
+        "name": "Biologie médicale"
+      },
+      {
+        "_id": "5fd68eeee6a05dd9368eca03",
+        "index": 1,
+        "name": "Biologie médicale - biochimie "
+      },
+      {
+        "_id": "5fd68eee51e6fa2e48a16be0",
+        "index": 2,
+        "name": "Biologie médicale - microbiologie"
+      },
+      {
+        "_id": "5fd68eeedefeffea02f26424",
+        "index": 3,
+        "name": "Biologie médicale - parasitologie"
+      },
+      {
+        "_id": "5fd68eee6567e3a12109f130",
+        "index": 4,
+        "name": "Biologie médicale - immunologie"
+      },
+      {
+        "_id": "5fd68eee09ec8b40be278a6d",
+        "index": 5,
+        "name": "Biologie médicale - hématologie"
+      },
+      {
+        "_id": "5fd68eee0a7d0eced096ec80",
+        "index": 6,
+        "name": "Histo-embryologie"
+      },
+      {
+        "_id": "5fd68eeef555fb0e68cf96f2",
+        "index": 7,
+        "name": "Physiologie et exploration fonctionnelle"
+      },
+      {
+        "_id": "5fd68eeeecaf0257d6d23383",
+        "index": 8,
+        "name": "Biophysique et médecine nucléaire"
+      },
+      {
+        "_id": "5fd68eeea3f0bf3849e65ef2",
+        "index": 9,
+        "name": "Pharmacologie"
+      },
+      {
+        "_id": "5fd68eee37915fc021f7a4eb",
+        "index": 10,
+        "name": "Génétique"
+      },
+      {
+        "_id": "5fd68eee96cab171a4323f23",
+        "index": 11,
+        "name": "Anatomie"
+      }
+    ]
+  }
+]
