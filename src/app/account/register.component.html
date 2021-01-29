@@ -49,7 +49,7 @@
         </div>
 
         <div class="row">
-          <div class="col-sm-6">
+          <div class="col-sm-4">
             <div class="form-group">
               <label for="email">Email</label>
               <input id="email" type="text" formControlName="email" class=" shadow-none form-control"
@@ -60,7 +60,7 @@
               </div>
             </div>
           </div>
-          <div class="col-sm-6">
+          <div class="col-sm-4">
             <div class="form-group">
               <label for="phone">Phone</label>
               <input type="text" id="phone" formControlName="phone" class="shadow-none form-control"
@@ -68,6 +68,25 @@
               <div *ngIf="submitted && f.email.errors" class="invalid-feedback">
                 <div *ngIf="f.phone.errors.required">Phone is required</div>
                 <div *ngIf="f.phone.errors.phone">Phone must be a valid phone format</div>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-4">
+            <div class="form-group">
+              <label for="category">Region</label>
+
+              <select [(ngModel)]="selectedRegion" name="region" id="region" formControlName="region"
+                      class=" shadow-none form-control"
+                      [ngClass]="{ 'is-invalid': submitted && f.region.errors }"
+                      >
+                <option disabled selected>Select Region</option>
+                <option *ngFor="let region of regions; index as i;" [value]="region.city">
+                  {{ region.city }}
+                </option>
+              </select>
+              <div *ngIf="submitted && f.region.errors" class="invalid-feedback">
+                <div *ngIf="f.region.errors.required">Select a region</div>
+                <div *ngIf="f.region.errors.category">Select a region</div>
               </div>
             </div>
           </div>
@@ -97,7 +116,7 @@
               <label for="specialty">Specialty</label>
               <select [(ngModel)]="selectedSpecialty" formControlName="specialty" class="shadow-none form-control"
                       [ngClass]="{ 'is-invalid': submitted && f.specialty.errors }" name="specialty" id="specialty"
-                      (change)='onChangeSpecialty($event.target.value)'>
+                      >
                 <option disabled selected>Select specialty</option>
                 <option *ngFor="let specialty of specialties; index as i;" [value]="specialty.name">
                   {{ specialty.name }}

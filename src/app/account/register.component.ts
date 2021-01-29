@@ -18,8 +18,9 @@ export class RegisterComponent implements OnInit {
   categories: any;
   selectedCategory;
   specialties: any;
+  regions: any;
   selectedSpecialty;
-
+  selectedRegion;
   constructor(
     private formBuilder: FormBuilder,
     private route: ActivatedRoute,
@@ -39,6 +40,7 @@ export class RegisterComponent implements OnInit {
       email: ['', [Validators.required, Validators.email]],
       category: ['', Validators.required],
       specialty: ['', Validators.required],
+      region: ['', Validators.required],
       phone: ['', [Validators.required, Validators.pattern(/^\D*(\d\D*){8,13}$/)]],
       password: ['', [Validators.required, Validators.minLength(6)]],
       confirmPassword: ['', Validators.required],
@@ -50,6 +52,10 @@ export class RegisterComponent implements OnInit {
     this.http.get('assets/specialties.json').subscribe(res => {
       this.categories = res;
     });
+
+    this.http.get('assets/regions.json').subscribe(res => {
+      this.regions = res;
+    });
   }
 
   // convenience getter for easy access to form fields
@@ -58,7 +64,6 @@ export class RegisterComponent implements OnInit {
   }
 
   onSubmit() {
-    console.log(this.form);
     this.submitted = true;
 
     // reset alerts on submit
@@ -86,11 +91,6 @@ export class RegisterComponent implements OnInit {
 
   onChangeCategory(value: any) {
     this.specialties = this.categories[this.selectedCategory].specialties;
-    console.log(this.categories[this.selectedCategory].name);
   }
 
-  onChangeSpecialty(value: any) {
-
-    console.log(this.selectedSpecialty);
-  }
 }

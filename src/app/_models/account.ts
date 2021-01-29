@@ -7,6 +7,7 @@ export class Account {
     lastName: string;
     email: string;
     specialty: string;
+    region: string;
     role: Role;
     jwtToken?: string;
 }
