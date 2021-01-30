@@ -16,11 +16,8 @@ defaults:
 jobs:
   build:
 
-    runs-on: ubuntu-latest
-
-    strategy:
-      matrix:
-        node-version: [12.x]
+    runs-on: macOS-latest
+  
     steps:
     - uses: actions/checkout@v2
     - name: Use Node.js
@@ -29,8 +26,14 @@ jobs:
         node-version: '12.x'
     - name: run npm cmd  
       run: |
-        sudo apt-get update
-        sudo apt-get install -y libgbm-dev
         npm install
         npm run build --if-present
         npm test
+    - name: Build and Push Docker Image
+      uses: mr-smithers-excellent/docker-build-push@v4
+      with:
+        image: giben2020/medbox
+        registry: docker.io
+        username: ${{ secrets.DOCKER_USERNAME }}
+        password: ${{ secrets.DOCKER_PASSWORD }}
+         
