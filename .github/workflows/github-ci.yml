@@ -10,7 +10,7 @@ on:
 
 defaults:
   run:
-    working-directory: ./medbox
+    working-directory: .
 
 
 jobs:
