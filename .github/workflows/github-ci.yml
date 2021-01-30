@@ -29,6 +29,8 @@ jobs:
         node-version: '12.x'
     - name: run npm cmd  
       run: |
+        sudo apt-get update
+        sudo apt-get install -y libgbm-dev
         npm install
         npm run build --if-present
         npm test
