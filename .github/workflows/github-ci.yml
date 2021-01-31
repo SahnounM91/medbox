@@ -16,7 +16,7 @@ defaults:
 jobs:
   build:
 
-    runs-on: macOS-latest
+    runs-on: ubuntu-latest
   
     steps:
     - uses: actions/checkout@v2
@@ -27,8 +27,8 @@ jobs:
     - name: run npm cmd  
       run: |
         npm install
-        npm run build --if-present
-        npm test
+        npm build 
+        
     - name: Build and Push Docker Image
       uses: mr-smithers-excellent/docker-build-push@v4
       with:
@@ -36,4 +36,26 @@ jobs:
         registry: docker.io
         username: ${{ secrets.DOCKER_USERNAME }}
         password: ${{ secrets.DOCKER_PASSWORD }}
-         
+    
+  deploy-to-test:
+      # Only run this job if "build" has ended successfully
+      needs:
+        - build
+
+      runs-on: ubuntu-latest
+
+      steps:
+        # Checks-out your repository under $GITHUB_WORKSPACE
+        - uses: actions/checkout@v2
+
+        # Set up  environment
+        - name: Use Node.js
+          uses: actions/setup-node@v1
+          with:
+            node-version: '12.x'
+
+        
+        # Deploy to server
+        - name: deploy to server
+          run: |
+            
