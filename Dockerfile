@@ -4,7 +4,7 @@ RUN apt-get install -y curl software-properties-common && curl -sL https://deb.n
 WORKDIR /medbox
 COPY . ./
 RUN npm install
-CMD npm run deploy
+CMD npm run-script build
 COPY nginx/nginx.conf /etc/nginx/conf.d/default.conf
 COPY /medbox  /var/www/html/
 
