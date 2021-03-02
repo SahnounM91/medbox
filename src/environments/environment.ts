@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-  apiUrl: 'https://api.medbox-tn.Com'
+  apiUrl: 'https://api.medbox-tn.com'
 };
 
 /*
